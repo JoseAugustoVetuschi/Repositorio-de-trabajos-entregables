@@ -404,7 +404,7 @@
     }
 
     .menu li :hover {
-        background: rgb(161, 20, 20);
+        background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
         border-radius: 2rem;
         transform: scale(1.2);
         color: black;
@@ -509,7 +509,7 @@
 
 
 .footer li :hover {
-    background: rgb(161, 20, 20);
+    background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
     border-radius: 2rem;
     transform: scale(1.2);
     color: black;
