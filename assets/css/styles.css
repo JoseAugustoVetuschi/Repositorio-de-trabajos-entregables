@@ -407,6 +407,7 @@
         background: rgb(161, 20, 20);
         border-radius: 2rem;
         transform: scale(1.2);
+        color: black;
     }
 
 
@@ -511,6 +512,7 @@
     background: rgb(161, 20, 20);
     border-radius: 2rem;
     transform: scale(1.2);
+    color: black;
 }  
 
     /*fin de indexhtml*/
@@ -526,7 +528,6 @@
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
-
         background-color: rgb(219, 16, 16);
     }
 
@@ -538,7 +539,8 @@
         height: 100%;
         width: 20%;
         background-color: grey;
-
+        margin: 0% 0.5%;
+        padding: 1% 1%;
 
     }
 
