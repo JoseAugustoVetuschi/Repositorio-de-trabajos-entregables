@@ -266,8 +266,7 @@
 
 .carousel-inner {
    
-    height: 29rem;
-    max-width: 44rem;
+   max-height: 39rem;
 }
 
 .destacados h3 {
