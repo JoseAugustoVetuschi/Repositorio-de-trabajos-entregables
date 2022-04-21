@@ -7,233 +7,6 @@
 
 
 
-@media screen and (min-width: 300px) and (max-width: 1023px) {
-    .menu {
-
-
-        width: 100%;
-        height: 100%;
-        background-color: rgb(24, 24, 24);
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        
-    
-    }
-    
-     .menu ul {
-        display: flex;
-        text-align: center;
-        list-style: none;
-        background-color: rgb(24, 24, 24);
-    } 
-    
-    
-    
-    .menu li a {
-        display: flex;
-        color: rgb(245, 245, 245);
-        text-decoration: none;
-        padding: 1em 6em;
-        box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.72);
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        border-left: 1px solid;
-        border-right: 1px solid;
-        justify-content: center;
-        
-    }
-
-
-    .destacados__img {
-        
-        flex-direction: column;
-    }
-
-    .footer ul {
-
-
-        flex-direction: column;
-    }
-
-
-/* index fin */
-
-
-
-
-/* productos fin */
-
-.formulario__titulo{
-    max-width: 19rem;
-    min-width: 10rem;
-}
-
-/* contactanos fin */
-
-.fotos__local {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.fotos__localuno {
-
-    
-    width: 50%;
-    
-}
-
-.fotos__localdos {
-
-
-    width: 50%;
-
-}
-
-.fotos__localtres {
-
-
-    width: 50%;
-
-}
-}
-/* Nosotros fin */
-
-@media screen and (min-width: 1024px) {
-
-    .nav {
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        height: 100%;
-    } 
-
-    .menu ul {
-        display: flex;
-        text-align: center;
-        list-style: none;
-        background-color: rgb(24, 24, 24);
-        flex-wrap: nowrap;
-    }
-
-    .menu {
-
-        width: 100%; 
-        height: 70%;
-        background-color: rgb(24, 24, 24);
-        list-style: none;
-        display: flex;
-    }
-
-    .menu li a {
-        display: flex;
-        padding: 1em 3.4em;
-        color: rgb(245, 245, 245);
-        text-decoration: none;
-        
-    }
-
-    .menu__inicio {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-    }
-
-    .menu__productos {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-
-    }
-
-    .menu__favoritos {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-    }
-
-    .menu__historial {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-    }
-
-    .menu__contactanos {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-    }
-
-    .menu__nosotros {
-        display: flex;
-        width: 20vw;
-        background-color: rgb(24, 24, 24);
-
-    }
-
-    .menu li :hover {
-        background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
-        border-radius: 2rem;
-        transform: scale(1.2);
-        color: black;
-    }
-
-    .destacados__img {
-        
-        flex-direction: row;
-    }
-
-
-
- .footer ul {
-
-        flex-direction: row;
-
-    }
-
-/* index fin */
-   
-
-
-
-
-/* productos fin */
-/* Contactanos fin */
-
-
-.fotos__local {
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.fotos__localuno {
-
-    
-    width: 100%;
-    
-}
-
-.fotos__localdos {
-
-
-    width: 100%;
-
-}
-
-.fotos__localtres {
-
-
-    width: 100%;
-
-}
-
-/* Nosotros fin */
-
-
-
-}
 
 .header {
 
@@ -327,6 +100,7 @@
         border-radius: 2rem;
         transform: scale(1.2);
         color: black;
+
 }
 
 /* Fin Index */
@@ -368,9 +142,17 @@
     justify-content: center;
     border: solid 0.3rem rgb(0, 0, 0);
     border-radius: 2rem;
-    margin: 0px 1px;
+    margin: 7px 1px;
     padding: 3px;
 
+}
+
+
+.card:hover{
+
+    background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
+    box-shadow: rgb(255, 230, 86) 0px 2px 0px 2px;
+    transform: scale(1.2);
 }
 
 
@@ -542,3 +324,221 @@
 
 }
 
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+    
+    
+    .header{
+        display: none;
+    }
+    
+    
+    .menu__slider{
+        display: flex;
+        padding: 20px;
+    }
+
+
+
+    .nav{
+        display: none;
+    }
+
+    .destacados__img {
+        
+        flex-direction: column;
+    }
+
+    .footer ul {
+
+
+        flex-direction: column;
+    }
+
+
+/* index fin */
+
+
+
+
+/* productos fin */
+
+.formulario__titulo{
+    max-width: 19rem;
+    min-width: 10rem;
+}
+
+/* contactanos fin */
+
+.fotos__local {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fotos__localuno {
+
+    
+    width: 71%;
+    
+}
+
+.fotos__localdos {
+
+
+    width: 75%;
+
+}
+
+.fotos__localtres {
+
+
+    width: 81%;
+
+}
+}
+/* Nosotros fin */
+
+@media screen and (min-width: 1024px) {
+
+    
+    
+    .navbar{
+        display: none;
+    }
+    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100%;
+    } 
+
+    .menu ul {
+        display: flex;
+        text-align: center;
+        list-style: none;
+        background-color: rgb(24, 24, 24);
+        flex-wrap: nowrap;
+    }
+
+    .menu {
+
+        width: 100%; 
+        height: 70%;
+        background-color: rgb(24, 24, 24);
+        list-style: none;
+        display: flex;
+    }
+
+    .menu li a {
+        display: flex;
+        padding: 1em 3.4em;
+        color: rgb(245, 245, 245);
+        text-decoration: none;
+        
+    }
+
+    .menu__inicio {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+    }
+
+    .menu__productos {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+
+    }
+
+    .menu__favoritos {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+    }
+
+    .menu__historial {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+    }
+
+    .menu__contactanos {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+    }
+
+    .menu__nosotros {
+        display: flex;
+        width: 20vw;
+        background-color: rgb(24, 24, 24);
+
+    }
+
+    .menu li :hover {
+        background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
+        border-radius: 2rem;
+        transform: scale(1.2);
+        color: black;
+    }
+
+    .destacados__img {
+        
+        flex-direction: row;
+    }
+
+
+
+ .footer ul {
+
+        flex-direction: row;
+
+    }
+
+/* index fin */
+   
+
+a {
+    color: #e2e2e2;
+    text-decoration: none ;
+}
+
+
+/* productos fin */
+/* Contactanos fin */
+
+
+.fotos__local {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.fotos__localuno {
+
+    
+    width: 100%;
+    
+}
+
+.fotos__localdos {
+
+
+    width: 100%;
+
+}
+
+.fotos__localtres {
+
+
+    width: 100%;
+
+}
+
+/* Nosotros fin */
+
+
+
+}
