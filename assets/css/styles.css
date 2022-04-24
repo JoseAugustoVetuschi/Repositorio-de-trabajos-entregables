@@ -30,9 +30,10 @@
 
 .menu li :hover {
     background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
-        border-radius: 2rem;
+        border-radius: 1rem;
         transform: scale(1.2);
         color: black;
+        transition:all 0.1s ease-out;
 
 }
 
@@ -100,7 +101,8 @@
         border-radius: 2rem;
         transform: scale(1.2);
         color: black;
-
+        transition:all 0.1s ease-out;
+       
 }
 
 /* Fin Index */
@@ -149,10 +151,11 @@
 
 
 .card:hover{
-
+    color: white;
     background-image: linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
-    box-shadow: rgb(255, 230, 86) 0px 2px 0px 2px;
+    box-shadow: rgb(71, 71, 71)px 0px 2px;
     transform: scale(1.2);
+    transition:all 0.1s ease-out;
 }
 
 
