@@ -1,0 +1,58 @@
+.boton{
+        background-color: rgb(20, 82, 218);
+        color: white;
+        text-align: center;
+        border-radius: 2rem;
+
+    &:hover{
+        background-color: white;
+        color:rgb(20, 82, 218);
+    }
+
+}
+
+.boton__rojo{
+    @extend .boton;
+    background-color: rgb(212, 25, 25);
+    
+    &:hover{
+        color: rgb(212, 25, 25);
+    }
+
+}
+
+
+.boton__naranja{
+    @extend .boton;
+    background-color: rgb(236, 84, 29);
+    
+    &:hover{
+        color:rgb(236, 84, 29);
+    }
+}
+
+.boton__aqua{
+    @extend .boton;
+    background-color: rgb(77, 223, 223);
+    color: rgb(27, 26, 26);
+    
+    &:hover{
+        background-color: rgb(27, 26, 26);
+        color:rgb(77, 223, 223) ;
+
+    }
+}
+
+.boton__negro{
+    @extend .boton;
+    background-color: rgb(27, 26, 26);
+    color:white ;
+    
+    &:hover{
+        background-color:white ;
+        color:rgb(27, 26, 26);
+
+    }
+    
+}
+

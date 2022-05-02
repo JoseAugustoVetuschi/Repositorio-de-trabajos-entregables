@@ -1,0 +1,28 @@
+@mixin size__menu__box ($display, $width) {
+        display:$display ;
+        width: $width ;
+    
+}
+
+
+@mixin size_letra ($size, $weight){
+
+    font-size: $size ;
+    font-weight: $weight ;
+    
+}
+
+
+
+.letra__chica{
+    @include size_letra(23px, 100 );
+
+}
+
+.letra__mediana{
+    @include size_letra(27px, 200 );
+}
+
+.letra__grande{
+    @include size_letra(50px, 300 );
+}

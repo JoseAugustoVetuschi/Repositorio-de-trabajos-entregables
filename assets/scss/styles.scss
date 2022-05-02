@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +6,10 @@
     box-sizing: border-box;
 }
 
-$color-background-menu-o-titulos:rgb(24, 24, 24);
-$color-background-hover:linear-gradient(to bottom, rgb(161, 20, 20), rgb(131, 91, 91));
-$color-background-productos:rgb(219, 16, 16);
+@import "./variables"; 
+@import "./botones";
+@import "./mixins";
+@import"./maps";
 
 .header {
 
@@ -19,7 +21,7 @@ $color-background-productos:rgb(219, 16, 16);
     height: 100%;
     font-size: 1em;
     background-color: $color-background-menu-o-titulos;
-    color: rgb(245, 245, 245);
+    color: $color-letras-titulos-o-cards;
 }
 
 
@@ -30,7 +32,7 @@ $color-background-productos:rgb(219, 16, 16);
     max-height: 39rem;
 }
 
-.destacados h3 {
+.destacados h2 {
 
     height: 5%;
     width: 100%;
@@ -55,39 +57,46 @@ $color-background-productos:rgb(219, 16, 16);
 }
 
 
-.footer ul {
-    display: flex;
-    height: 100%;
-    width: 100vw;
-    justify-content: space-between;
-    background-color: $color-background-menu-o-titulos;
-    color: blanchedalmond;
-    justify-content: center;
-    padding: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    list-style: none;
+.footer {
+
+    margin-top: 10px;
 
 
-    li a {
 
-
+     ul {
         display: flex;
+        height: 100%;
+        width: 100vw;
+        justify-content: space-between;
+        background-color: $color-background-menu-o-titulos;
+        color: $color-letras-titulos-o-cards;
         justify-content: center;
-        padding: 1em 6em;
-        color: white;
-        text-decoration: none;
+        padding: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        list-style: none;
+
+
+        li a {
+
+
+            display: flex;
+            justify-content: center;
+            padding: 1em 6em;
+            color: $color-letras-titulos-o-cards;
+            text-decoration: none;
 
 
 
 
 
-        &:hover {
-            background-image: $color-background-hover;
-            border-radius: 2rem;
-            transform: scale(1.2);
-            color: black;
-            transition: all 0.1s ease-out;
+            &:hover {
+                background-image: $color-background-hover;
+                border-radius: 2rem;
+                transform: scale(1.2);
+                color: black;
+                transition: all 0.1s ease-out;
+            }
         }
     }
 }
@@ -123,22 +132,42 @@ $color-background-productos:rgb(219, 16, 16);
     }
 
     .container__titulo {
-        background-image: $color-background-hover;
-        color: white;
+        background-color: map-get($map:$marcas, $key:Samsung );
+        color: $color-letras-titulos-o-cards;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        border: solid 0.3rem rgb(0, 0, 0);
+        border: solid 0.1rem rgb(0, 0, 0);
         border-radius: 2rem;
         margin: 7px 1px;
         padding: 3px;
 
     }
 
+    .container__titulo__xiaomi{
+        @extend .container__titulo;
+        background-color: map-get($map: $marcas , $key: Xiaomi )
+    }
+    .container__titulo__motorola{
+        @extend .container__titulo;
+        color: rgb(27, 26, 26);
+        background-color: map-get($map: $marcas , $key: Motorola )
+    }
+    .container__titulo__lg{
+        @extend .container__titulo;
+        color: rgb(27, 26, 26);
+        background-color: map-get($map: $marcas , $key: LG )
+    }
+    .container__titulo__huawei{
+        @extend .container__titulo;
+        background-color: map-get($map: $marcas , $key: huawei )
+    }
+
+
 
     .card:hover {
-        color: white;
+        color: $color-letras-titulos-o-cards;
         background-image: $color-background-hover;
         box-shadow: rgb(0, 0, 0) 2px;
         transform: scale(1.2);
@@ -163,11 +192,12 @@ $color-background-productos:rgb(219, 16, 16);
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: solid 1rem rgb(219, 16, 16);;
+    border: solid 1rem rgb(219, 16, 16);
+    ;
 
 
     .formulario__titulo {
-        background-color: rgb(173, 16, 16);
+        background-color: $color-background-titulos-contacto-nosotros;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -191,41 +221,22 @@ $color-background-productos:rgb(219, 16, 16);
     }
 
     .formulario__apelldio {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 1rem;
+       @extend .formulario__nombre
 
     }
 
 
     .formulario__mail {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @extend .formulario__nombre
 
     }
 
     .formulario__mensaje {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 1rem;
+        @extend .formulario__nombre
     }
 
     .formulario__pais {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 1rem;
+        @extend .formulario__nombre
     }
 
     .formulario__botones {
@@ -245,7 +256,7 @@ $color-background-productos:rgb(219, 16, 16);
         border: none;
         padding: 1rem;
         border-radius: 0.5rem;
-        color: #ffffff;
+        color: $color-letras-titulos-o-cards;
         background: rgb(173, 16, 16);
         cursor: pointer;
         box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.1);
@@ -263,7 +274,8 @@ $color-background-productos:rgb(219, 16, 16);
     background-color: grey;
     height: 100%;
     width: 100%;
-    border: solid 1rem rgb(219, 16, 16);;
+    border: solid 1rem rgb(219, 16, 16);
+    ;
 
 
 
@@ -272,11 +284,14 @@ $color-background-productos:rgb(219, 16, 16);
         flex-direction: column;
         justify-content: center;
         margin: 1% 28%;
-        background-color: red;
+        color:$color-letras-titulos-o-cards;
+        background-color: $color-background-titulos-contacto-nosotros;
         height: 10%;
         width: 42%;
         text-align: center;
         border-radius: 2rem;
+
+   
 
     }
 
@@ -288,6 +303,7 @@ $color-background-productos:rgb(219, 16, 16);
         width: 100%;
         height: 58%;
         padding: 1%;
+      
     }
 
 
@@ -297,7 +313,8 @@ $color-background-productos:rgb(219, 16, 16);
         flex-direction: column;
         justify-content: center;
         margin: 5% 32%;
-        background-color: rgb(219, 16, 16);;
+        background-color: $color-background-titulos-contacto-nosotros;
+        color:$color-letras-titulos-o-cards;
         height: 15%;
         text-align: center;
         border-radius: 2rem
@@ -348,6 +365,10 @@ $color-background-productos:rgb(219, 16, 16);
     /* index fin */
 
 
+    a {
+        color: $color-letras-titulos-o-cards;
+        text-decoration: none;
+    }
 
 
     /* productos fin */
@@ -407,69 +428,66 @@ $color-background-productos:rgb(219, 16, 16);
         height: 100%;
     }
 
+.menu {
+
+        width: 100%;
+        height: 70%;
+        background-color: $color-background-menu-o-titulos;
+        list-style: none;
+        display: flex; 
+         margin-bottom: 0rem;
+    }
+
+
     .menu ul {
         display: flex;
         text-align: center;
         list-style: none;
         background-color: $color-background-menu-o-titulos;
         flex-wrap: nowrap;
+      
     }
 
-    .menu {
-
-        width: 100%;
-        height: 70%;
-        background-color: $color-background-menu-o-titulos;
-        list-style: none;
-        display: flex;
-    }
 
     .menu li a {
         display: flex;
         padding: 1em 3.4em;
-        color: rgb(245, 245, 245);
+        color: $color-letras-titulos-o-cards;
         text-decoration: none;
-
     }
 
     .menu__inicio {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__productos {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
 
     }
 
     .menu__favoritos {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__historial {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__contactanos {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__nosotros {
-        display: flex;
-        width: 20vw;
+        @include size__menu__box(flex , 20vw );
         background-color: $color-background-menu-o-titulos;
 
     }
-    
+
     .menu li :hover {
         background-image: $color-background-hover;
         border-radius: 2rem;
@@ -496,7 +514,7 @@ $color-background-productos:rgb(219, 16, 16);
 
 
     a {
-        color: #e2e2e2;
+        color: $color-letras-titulos-o-cards;
         text-decoration: none;
     }
 

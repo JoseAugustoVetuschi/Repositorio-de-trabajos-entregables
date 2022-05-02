@@ -4,6 +4,51 @@
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box; }
 
+.boton, .boton__rojo, .boton__naranja, .boton__aqua, .boton__negro {
+  background-color: #1452da;
+  color: white;
+  text-align: center;
+  border-radius: 2rem; }
+  .boton:hover, .boton__rojo:hover, .boton__naranja:hover, .boton__aqua:hover, .boton__negro:hover {
+    background-color: white;
+    color: #1452da; }
+
+.boton__rojo {
+  background-color: #d41919; }
+  .boton__rojo:hover {
+    color: #d41919; }
+
+.boton__naranja {
+  background-color: #ec541d; }
+  .boton__naranja:hover {
+    color: #ec541d; }
+
+.boton__aqua {
+  background-color: #4ddfdf;
+  color: #1b1a1a; }
+  .boton__aqua:hover {
+    background-color: #1b1a1a;
+    color: #4ddfdf; }
+
+.boton__negro {
+  background-color: #1b1a1a;
+  color: white; }
+  .boton__negro:hover {
+    background-color: white;
+    color: #1b1a1a; }
+
+.letra__chica {
+  font-size: 23px;
+  font-weight: 100; }
+
+.letra__mediana {
+  font-size: 27px;
+  font-weight: 200; }
+
+.letra__grande {
+  font-size: 50px;
+  font-weight: 300; }
+
 .header {
   display: flex;
   flex-direction: row;
@@ -12,12 +57,12 @@
   height: 100%;
   font-size: 1em;
   background-color: #181818;
-  color: whitesmoke; }
+  color: white; }
 
 .carousel-inner {
   max-height: 39rem; }
 
-.destacados h3 {
+.destacados h2 {
   height: 5%;
   width: 100%;
   display: flex;
@@ -36,30 +81,32 @@
   align-items: center;
   padding: 1em; }
 
-.footer ul {
-  display: flex;
-  height: 100%;
-  width: 100vw;
-  justify-content: space-between;
-  background-color: #181818;
-  color: blanchedalmond;
-  justify-content: center;
-  padding: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-  list-style: none; }
-  .footer ul li a {
+.footer {
+  margin-top: 10px; }
+  .footer ul {
     display: flex;
-    justify-content: center;
-    padding: 1em 6em;
+    height: 100%;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: #181818;
     color: white;
-    text-decoration: none; }
-    .footer ul li a:hover {
-      background-image: linear-gradient(to bottom, #a11414, #835b5b);
-      border-radius: 2rem;
-      transform: scale(1.2);
-      color: black;
-      transition: all 0.1s ease-out; }
+    justify-content: center;
+    padding: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    list-style: none; }
+    .footer ul li a {
+      display: flex;
+      justify-content: center;
+      padding: 1em 6em;
+      color: white;
+      text-decoration: none; }
+      .footer ul li a:hover {
+        background-image: linear-gradient(to bottom, #a11414, #835b5b);
+        border-radius: 2rem;
+        transform: scale(1.2);
+        color: black;
+        transition: all 0.1s ease-out; }
 
 /* Fin Index */
 /* Incio Productos */
@@ -82,17 +129,27 @@
     padding: 1% 1%;
     min-width: 11rem;
     max-width: 19rem; }
-  .clasif .container__titulo {
-    background-image: linear-gradient(to bottom, #a11414, #835b5b);
+  .clasif .container__titulo, .clasif .container__titulo__xiaomi, .clasif .container__titulo__motorola, .clasif .container__titulo__lg, .clasif .container__titulo__huawei {
+    background-color: #1452da;
     color: white;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: solid 0.3rem black;
+    border: solid 0.1rem black;
     border-radius: 2rem;
     margin: 7px 1px;
     padding: 3px; }
+  .clasif .container__titulo__xiaomi {
+    background-color: #eb802a; }
+  .clasif .container__titulo__motorola {
+    color: #1b1a1a;
+    background-color: #32c0e4; }
+  .clasif .container__titulo__lg {
+    color: #1b1a1a;
+    background-color: #e03030; }
+  .clasif .container__titulo__huawei {
+    background-color: #363535; }
   .clasif .card:hover {
     color: white;
     background-image: linear-gradient(to bottom, #a11414, #835b5b);
@@ -111,7 +168,7 @@
   flex-direction: column;
   border: solid 1rem #db1010; }
   .formulario .formulario__titulo {
-    background-color: #ad1010;
+    background-color: #db1010;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -122,34 +179,7 @@
     height: 10%;
     margin: 1% 37%;
     border-radius: 2rem; }
-  .formulario .formulario__nombre {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem; }
-  .formulario .formulario__apelldio {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem; }
-  .formulario .formulario__mail {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .formulario .formulario__mensaje {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem; }
-  .formulario .formulario__pais {
+  .formulario .formulario__nombre, .formulario .formulario__apelldio, .formulario .formulario__mail, .formulario .formulario__mensaje, .formulario .formulario__pais {
     height: 100%;
     width: 100%;
     display: flex;
@@ -168,7 +198,7 @@
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
-    color: #ffffff;
+    color: white;
     background: #ad1010;
     cursor: pointer;
     box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.1); }
@@ -186,7 +216,8 @@
     flex-direction: column;
     justify-content: center;
     margin: 1% 28%;
-    background-color: red;
+    color: white;
+    background-color: #db1010;
     height: 10%;
     width: 42%;
     text-align: center;
@@ -204,6 +235,7 @@
     justify-content: center;
     margin: 5% 32%;
     background-color: #db1010;
+    color: white;
     height: 15%;
     text-align: center;
     border-radius: 2rem; }
@@ -225,6 +257,9 @@
   .footer ul {
     flex-direction: column; }
   /* index fin */
+  a {
+    color: white;
+    text-decoration: none; }
   /* productos fin */
   .formulario__titulo {
     max-width: 19rem;
@@ -249,22 +284,23 @@
     flex-direction: row;
     width: 100vw;
     height: 100%; }
+  .menu {
+    width: 100%;
+    height: 70%;
+    background-color: #181818;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0rem; }
   .menu ul {
     display: flex;
     text-align: center;
     list-style: none;
     background-color: #181818;
     flex-wrap: nowrap; }
-  .menu {
-    width: 100%;
-    height: 70%;
-    background-color: #181818;
-    list-style: none;
-    display: flex; }
   .menu li a {
     display: flex;
     padding: 1em 3.4em;
-    color: whitesmoke;
+    color: white;
     text-decoration: none; }
   .menu__inicio {
     display: flex;
@@ -302,7 +338,7 @@
     flex-direction: row; }
   /* index fin */
   a {
-    color: #e2e2e2;
+    color: white;
     text-decoration: none; }
   /* productos fin */
   /* Contactanos fin */
