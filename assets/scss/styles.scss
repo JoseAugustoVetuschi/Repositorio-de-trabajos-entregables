@@ -179,10 +179,51 @@
 
 /* Inicio Historial */
 
+.body__historial{
+    background-color: $color-background-productos;
+}
+
+
+.titulo__historial{
+    background-image:$color-background-titulos-gradiente ;
+    color: $color-letras-titulos-o-cards;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 0.1rem rgb(0, 0, 0);
+    border-radius: 2rem;
+    margin: 7px 1px;
+    padding: 3px;
+}
+
 
 
 /* inicio Favoritos */
 
+.body__favoritos{
+  background-color: $color-background-productos;
+}
+.titulo__favoritos{
+        background-image:$color-background-titulos-gradiente ;
+        color: $color-letras-titulos-o-cards;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: solid 0.1rem rgb(0, 0, 0);
+        border-radius: 2rem;
+        margin: 7px 1px;
+        padding: 3px;
+}
+
+.card:hover {
+    color: $color-letras-titulos-o-cards;
+    background-image: $color-background-hover;
+    box-shadow: rgb(0, 0, 0) 2px;
+    transform: scale(1.2);
+    transition: all 0.1s ease-out;
+}
 
 /* inicio contactanos  */
 
@@ -412,6 +453,9 @@
 }
 
 /* Nosotros fin */
+
+
+ /* favoritos fin */
 
 @media screen and (min-width: 1024px) {
 

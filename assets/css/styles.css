@@ -158,7 +158,44 @@
     transition: all 0.1s ease-out; }
 
 /* Inicio Historial */
+.body__historial {
+  background-color: #db1010; }
+
+.titulo__historial {
+  background-image: linear-gradient(to bottom, #a11414, #835b5b);
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid 0.1rem black;
+  border-radius: 2rem;
+  margin: 7px 1px;
+  padding: 3px; }
+
 /* inicio Favoritos */
+.body__favoritos {
+  background-color: #db1010; }
+
+.titulo__favoritos {
+  background-image: linear-gradient(to bottom, #a11414, #835b5b);
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid 0.1rem black;
+  border-radius: 2rem;
+  margin: 7px 1px;
+  padding: 3px; }
+
+.card:hover {
+  color: white;
+  background-image: linear-gradient(to bottom, #a11414, #835b5b);
+  box-shadow: black 2px;
+  transform: scale(1.2);
+  transition: all 0.1s ease-out; }
+
 /* inicio contactanos  */
 .formulario {
   background-color: grey;
@@ -276,6 +313,7 @@
       width: 81%; } }
 
 /* Nosotros fin */
+/* favoritos fin */
 @media screen and (min-width: 1024px) {
   .navbar {
     display: none; }
