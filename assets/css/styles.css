@@ -60,13 +60,13 @@
   color: white; }
 
 .carousel-inner {
-  max-height: 39rem;
-  padding: 10px 0px 10px 0px; }
+  height: 25rem;
+  padding: 10px 0px 10px 0px;
+  min-height: 24rem;
+  max-height: 25rem; }
 
 .carousel-inner img {
-  height: 35rem;
-  object-fit: cover;
-  object-position: center; }
+  height: 25rem; }
 
 .destacados h2 {
   height: 5%;

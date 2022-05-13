@@ -24,19 +24,14 @@
 }
 
 
-
-
 .carousel-inner {
-
-    max-height: 39rem;
+    height: 25rem;
     padding: 10px 0px 10px 0px;
-    
+    min-height: 24rem;
+    max-height: 25rem;
 }
-
-.carousel-inner img {
-    height: 35rem;
-    object-fit: cover;
-    object-position: center;
+.carousel-inner img{
+    height: 25rem;
 }
 
 .destacados h2 {
@@ -378,11 +373,10 @@
     }
 
 
-
     .nav {
         display: none;
     }
-
+  
     .destacados__img {
 
         flex-direction: column;
@@ -528,6 +522,7 @@
         transition: all 0.1s ease-out;
     }
 
+   
     .destacados__img {
 
         flex-direction: row;
