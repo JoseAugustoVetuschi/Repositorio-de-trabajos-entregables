@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +5,7 @@
     box-sizing: border-box;
 }
 
-@import "./variables"; 
+@import "./variables";
 @import "./botones";
 @import "./mixins";
 @import"./maps";
@@ -30,6 +29,14 @@
 .carousel-inner {
 
     max-height: 39rem;
+    padding: 10px 0px 10px 0px;
+    
+}
+
+.carousel-inner img {
+    height: 35rem;
+    object-fit: cover;
+    object-position: center;
 }
 
 .destacados h2 {
@@ -63,7 +70,7 @@
 
 
 
-     ul {
+    ul {
         display: flex;
         height: 100%;
         width: 100vw;
@@ -72,23 +79,17 @@
         color: $color-letras-titulos-o-cards;
         justify-content: center;
         padding: 2em;
-        margin-bottom: 2em;
         text-align: center;
         list-style: none;
-
+        margin-bottom: 0rem;
 
         li a {
-
 
             display: flex;
             justify-content: center;
             padding: 1em 6em;
             color: $color-letras-titulos-o-cards;
             text-decoration: none;
-
-
-
-
 
             &:hover {
                 background-image: $color-background-hover;
@@ -105,87 +106,83 @@
 
 /* Incio Productos */
 
+.body__productos {
+
+    background-color: $color-background-productos;
+}
+
 .clasif {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    background-color: $color-background-productos;
-
-
-
-    .clasif__lista {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        width: 40%;
-        background-color: grey;
-        margin: 0% 0.5%;
-        padding: 1% 1%;
-        min-width: 11rem;
-        max-width: 19rem;
-
-
-    }
-
-    .container__titulo {
-        background-color: map-get($map:$marcas, $key:Samsung );
-        color: $color-letras-titulos-o-cards;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid 0.1rem rgb(0, 0, 0);
-        border-radius: 2rem;
-        margin: 7px 1px;
-        padding: 3px;
-
-    }
-
-    .container__titulo__xiaomi{
-        @extend .container__titulo;
-        background-color: map-get($map: $marcas , $key: Xiaomi )
-    }
-    .container__titulo__motorola{
-        @extend .container__titulo;
-        color: rgb(27, 26, 26);
-        background-color: map-get($map: $marcas , $key: Motorola )
-    }
-    .container__titulo__lg{
-        @extend .container__titulo;
-        color: rgb(27, 26, 26);
-        background-color: map-get($map: $marcas , $key: LG )
-    }
-    .container__titulo__huawei{
-        @extend .container__titulo;
-        background-color: map-get($map: $marcas , $key: huawei )
-    }
-
-
-
-    .card:hover {
-        color: $color-letras-titulos-o-cards;
-        background-image: $color-background-hover;
-        box-shadow: rgb(0, 0, 0) 2px;
-        transform: scale(1.2);
-        transition: all 0.1s ease-out;
-    }
+    align-items: center;
 
 }
 
+.container__titulo {
+    background-color: map-get($map:$marcas, $key:Samsung);
+    color: $color-letras-titulos-o-cards;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 0.1rem rgb(0, 0, 0);
+    border-radius: 2rem;
+    margin: 7px 1px;
+    padding: 3px;
+
+}
+
+.container__titulo__xiaomi {
+    @extend .container__titulo;
+    background-color: map-get($map: $marcas, $key: Xiaomi)
+}
+
+.container__titulo__motorola {
+    @extend .container__titulo;
+    color: rgb(27, 26, 26);
+    background-color: map-get($map: $marcas, $key: Motorola)
+}
+
+.container__titulo__lg {
+    @extend .container__titulo;
+    color: rgb(27, 26, 26);
+    background-color: map-get($map: $marcas, $key: LG)
+}
+
+.container__titulo__huawei {
+    @extend .container__titulo;
+    background-color: map-get($map: $marcas, $key: huawei)
+}
+
+.container__titulo__servicios {
+    @extend .container__titulo;
+    background-color: map-get($map: $marcas, $key: varios)
+}
+
+.container__titulo__Accesorios {
+    @extend .container__titulo;
+    background-color: map-get($map: $marcas, $key: varios)
+}
+
+.card:hover {
+    color: $color-letras-titulos-o-cards;
+    background-image: $color-background-hover;
+    box-shadow: rgb(0, 0, 0) 2px;
+    transform: scale(1.2);
+    transition: all 0.1s ease-out;
+}
 
 /* Inicio Historial */
 
-.body__historial{
+.body__historial {
     background-color: $color-background-productos;
 }
 
-
-.titulo__historial{
-    background-image:$color-background-titulos-gradiente ;
+.titulo__historial {
+    background-image: $color-background-titulos-gradiente;
     color: $color-letras-titulos-o-cards;
     width: 100%;
     display: flex;
@@ -197,24 +194,23 @@
     padding: 3px;
 }
 
-
-
 /* inicio Favoritos */
 
-.body__favoritos{
-  background-color: $color-background-productos;
+.body__favoritos {
+    background-color: $color-background-productos;
 }
-.titulo__favoritos{
-        background-image:$color-background-titulos-gradiente ;
-        color: $color-letras-titulos-o-cards;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid 0.1rem rgb(0, 0, 0);
-        border-radius: 2rem;
-        margin: 7px 1px;
-        padding: 3px;
+
+.titulo__favoritos {
+    background-image: $color-background-titulos-gradiente;
+    color: $color-letras-titulos-o-cards;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 0.1rem rgb(0, 0, 0);
+    border-radius: 2rem;
+    margin: 7px 1px;
+    padding: 3px;
 }
 
 .card:hover {
@@ -226,6 +222,10 @@
 }
 
 /* inicio contactanos  */
+
+.body__contactanos {
+    background-color: $color-background-titulos-contacto-nosotros;
+}
 
 .formulario {
     background-color: grey;
@@ -262,14 +262,12 @@
     }
 
     .formulario__apelldio {
-       @extend .formulario__nombre
-
+        @extend .formulario__nombre
     }
 
 
     .formulario__mail {
         @extend .formulario__nombre
-
     }
 
     .formulario__mensaje {
@@ -281,7 +279,6 @@
     }
 
     .formulario__botones {
-
 
         height: 100%;
         width: 100%;
@@ -305,9 +302,11 @@
 
 }
 
-
-
 /* inicio Nosotros */
+
+.body__nosotros {
+    background-color: $color-background-titulos-contacto-nosotros;
+}
 
 .sobre__nosotros {
     display: flex;
@@ -318,22 +317,17 @@
     border: solid 1rem rgb(219, 16, 16);
     ;
 
-
-
     .sobre__nosotros__titulo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 1% 28%;
-        color:$color-letras-titulos-o-cards;
+        color: $color-letras-titulos-o-cards;
         background-color: $color-background-titulos-contacto-nosotros;
         height: 10%;
         width: 42%;
         text-align: center;
         border-radius: 2rem;
-
-   
-
     }
 
     .sobre__nosotros__texto {
@@ -344,7 +338,7 @@
         width: 100%;
         height: 58%;
         padding: 1%;
-      
+
     }
 
 
@@ -355,19 +349,17 @@
         justify-content: center;
         margin: 5% 32%;
         background-color: $color-background-titulos-contacto-nosotros;
-        color:$color-letras-titulos-o-cards;
+        color: $color-letras-titulos-o-cards;
         height: 15%;
         text-align: center;
         border-radius: 2rem
     }
-
 
     .fotos__local {
 
         height: 100%;
         width: 100%;
         margin: 2% 0%;
-
     }
 }
 
@@ -405,6 +397,18 @@
 
     /* index fin */
 
+    .clasif__lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        background-image: $color-background-titulos-gradiente;
+        margin: 0% 0.5%;
+        padding: 1% 1%;
+        min-width: 11rem;
+        max-width: 19rem;
+    }
 
     a {
         color: $color-letras-titulos-o-cards;
@@ -425,41 +429,29 @@
         display: flex;
         flex-direction: column;
 
-
-
         .fotos__localuno {
-
-
             width: 71%;
-
         }
 
         .fotos__localdos {
-
-
             width: 75%;
-
         }
 
         .fotos__localtres {
-
-
             width: 81%;
-
         }
     }
-
-
 }
 
 /* Nosotros fin */
 
 
- /* favoritos fin */
+/* favoritos fin */
+
+
+
 
 @media screen and (min-width: 1024px) {
-
-
 
     .navbar {
         display: none;
@@ -470,18 +462,18 @@
         flex-direction: row;
         width: 100vw;
         height: 100%;
+        padding: 0px 0px 7px 0px;
     }
 
-.menu {
+    .menu {
 
         width: 100%;
         height: 70%;
         background-color: $color-background-menu-o-titulos;
         list-style: none;
-        display: flex; 
-         margin-bottom: 0rem;
+        display: flex;
+        margin-bottom: 0rem;
     }
-
 
     .menu ul {
         display: flex;
@@ -489,9 +481,7 @@
         list-style: none;
         background-color: $color-background-menu-o-titulos;
         flex-wrap: nowrap;
-      
     }
-
 
     .menu li a {
         display: flex;
@@ -501,61 +491,67 @@
     }
 
     .menu__inicio {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__productos {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
-
     }
 
     .menu__favoritos {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__historial {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__contactanos {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
     }
 
     .menu__nosotros {
-        @include size__menu__box(flex , 20vw );
+        @include size__menu__box(flex, 20vw);
         background-color: $color-background-menu-o-titulos;
-
     }
 
     .menu li :hover {
         background-image: $color-background-hover;
         border-radius: 2rem;
-        transform: scale(1.2);
+        transform: scale(1.1);
         color: black;
         transition: all 0.1s ease-out;
     }
-
 
     .destacados__img {
 
         flex-direction: row;
     }
 
-
-
     .footer ul {
-
         flex-direction: row;
-
     }
 
     /* index fin */
 
+    .clasif__lista {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        background-image: $color-background-titulos-gradiente;
+        margin: 0% 0.5%;
+        padding: 1% 1%;
+        min-width: 11rem;
+        max-width: 42rem;
+        color: $color-letras-titulos-o-cards;
+    }
 
     a {
         color: $color-letras-titulos-o-cards;
@@ -566,36 +562,22 @@
     /* productos fin */
     /* Contactanos fin */
 
-
     .fotos__local {
         display: flex;
         flex-direction: row;
 
-
-
         .fotos__localuno {
-
-
             width: 100%;
-
         }
 
         .fotos__localdos {
-
-
             width: 100%;
-
         }
 
         .fotos__localtres {
-
-
             width: 100%;
-
         }
-
     }
-
 }
 
 /* Nosotros fin */
